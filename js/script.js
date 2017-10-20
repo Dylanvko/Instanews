@@ -1,8 +1,9 @@
 $(document).ready(function() {
 
-var url = "https://api.nytimes.com/svc/topstories/v2/home.json";
-    url += '?' + $.param({
-  'api-key': "516e14d87c8e478195abbd4aaa72b938"
+  $('#sections').on('change',function(){
+    var section = $('#sections').val();
+    var url = 'https://api.nytimes.com/svc/topstories/v2/' + section + '.json';
+    url += '?' + $.param({'api-key': '516e14d87c8e478195abbd4aaa72b938'
 });
 
 $.ajax({
@@ -13,8 +14,9 @@ $.ajax({
 
 $.each(data.results, function(index, value) {
   console.log(value.title);
-  $('#story-grid').append('<li>' + value.abstract + '</li>');
-  $('li').slice(13).css('display', 'none');
+  $('#stories > ul').append('<li>' + value.abstract + '</li>');
+  $('li').append(value.multimedia[4].url);
+  $('li').slice(12).css('display', 'none');
 });
 
 })
@@ -22,5 +24,5 @@ $.each(data.results, function(index, value) {
   throw err;
 }); 
 }); 
-
+})
 //Hints: Will need to use .Filter() and .Slice()
