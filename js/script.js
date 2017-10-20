@@ -15,7 +15,6 @@ $.ajax({
 $.each(data.results, function(index, value) {
   console.log(value.title);
   $('#stories > ul').append('<li>' + value.abstract + '</li>');
-  $('li').append(value.multimedia[4].url);
   $('li').slice(12).css('display', 'none');
 });
 
