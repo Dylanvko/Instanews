@@ -19,7 +19,7 @@ $('#stories ul li').remove();
       return item.multimedia.length;
     })
   $.each(filteredData, function(index, value) {
-    $('#stories > ul').append('<li><a href="' + value.url + '"target="_blank"><div class="storywrapper">' + value.abstract + '<div class="imageurl" style="background-image:url(' + value.multimedia[4].url + ')"></div></li></div>');
+    $('#stories > ul').append('<li><a href="' + value.url + '"target="_blank"><div class="storywrapper"><div class="imageurl" style="background-image:url(' + value.multimedia[4].url + ')"><div class="story-text"><p>' + value.abstract + '</p></div></div></div></a></li>');
   });
   
 
