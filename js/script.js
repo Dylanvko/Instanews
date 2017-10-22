@@ -15,11 +15,11 @@ $('#stories ul li').remove();
     
     var slicedData = data.results.slice(0,12);
     console.log(slicedData);
-    var filteredData = slidedData.filter(function (item) {
+    var filteredData = slicedData.filter(function (item) {
       return item.multimedia.length;
     })
-  $.each(slicedData, function(index, value) {
-    $('#stories > ul').append('<li><div class="storywrapper">' + value.abstract + '<div class="imageurl" style="background-image:url(' + value.multimedia[4].url + ')"></div></li></div>');
+  $.each(filteredData, function(index, value) {
+    $('#stories > ul').append('<li><a href="' + value.url + '"target="_blank"><div class="storywrapper">' + value.abstract + '<div class="imageurl" style="background-image:url(' + value.multimedia[4].url + ')"></div></li></div>');
   });
   
 
@@ -28,5 +28,5 @@ $('#stories ul li').remove();
     throw err;
   }); 
   }); 
-  })
+  });
   //Hints: Will need to use .Filter() and .Slice()
