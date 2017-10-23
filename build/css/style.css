@@ -161,7 +161,7 @@ body {
   color: #ffffff; }
 
 .site-header {
-  padding: 2rem;
+  padding: 2rem 2rem 6rem 2rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -183,8 +183,15 @@ body {
       -ms-flex-direction: column;
           flex-direction: column; }
   .container .ajax-loader {
+    display: none;
     height: 1.5rem;
-    width: 1.5rem; }
+    width: 1.5rem;
+    position: absolute;
+    top: 50%;
+    left: 50%; }
+  .container .imageurl:hover .story-text {
+    bottom: 0;
+    height: 40%; }
   .container .stories ul {
     display: -webkit-box;
     display: -ms-flexbox;

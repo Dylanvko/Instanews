@@ -1,5 +1,5 @@
 .site-header {
-  padding: 2rem;
+  padding: 2rem 2rem 6rem 2rem;
   display: flex;
   flex-direction: row;
   align-content: center;
@@ -9,6 +9,6 @@
     
   }
   @include desktop {
-
+  
   }
 }
