@@ -1,5 +1,13 @@
-footer {
+.site-footer {
+  padding: 3rem;
   p {
     color: #c2c2c2;
+    text-align: center;
+    @include tablet {
+      text-align: center;
+    }
+    @include desktop {
+     text-align: left;
+    }
   }
 }

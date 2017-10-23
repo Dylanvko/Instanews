@@ -1,3 +1,12 @@
+.container {
+  display: flex;
+  flex-direction: column;
+
+.ajax-loader {
+  height: 1.5rem;
+  width: 1.5rem;
+}
+
 .stories {
   ul {
     display: flex;
@@ -17,10 +26,14 @@
           background-size: cover;
           .story-text {
             background: rgba(0,0,0,.6);
+            bottom: 0;
             color: #fff;
             display: flex;
             font-size: 1rem;
-            bottom: 0;
+            p {
+              line-height: 1.5rem;
+              vertical-align: baseline;
+            }
           }
         }
       }
@@ -34,4 +47,5 @@
       }
     }
   }
+}
 }
