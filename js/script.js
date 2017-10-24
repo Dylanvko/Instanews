@@ -7,16 +7,17 @@ $(document).ready(function () {
       'api-key': '516e14d87c8e478195abbd4aaa72b938'
     });
     $('.logo img').css({
-      'height': '5rem',
+      'height': 'auto',
       'width': '5rem'
+    });
+    $('.site-header').css({
+      'height': '4.5rem'
     });
 
     $('#stories ul li').remove();
 
     $('.ajax-loader').css('display', 'block');
 
-    
-      
     $.ajax({
         url: url,
         method: 'GET'
@@ -34,12 +35,12 @@ $(document).ready(function () {
 
       })
       .fail(function (err) {
-        alert('something terrible happened');
+        alert('Sorry, there was an error.');
         throw err;
       })
-      .always(function() {
-        $('.ajax-loader').css('display', 'none');
+      .always(function () {
+        $('.ajax-loader').css('display', 'none')
         // could also do .remove() to remove from the DOM, however you'd have to use .append() at the top instead of display block.
-      }); 
+      });
   });
 });

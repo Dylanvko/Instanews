@@ -1,6 +1,7 @@
 .container {
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
 
 .ajax-loader {
   display: none;
@@ -8,7 +9,11 @@
   width: 1.5rem;
   position: absolute;
   top: 50%;
-  left: 50%;
+  left: 49%;
+}
+
+.search-menu {
+  margin: 0rem 0rem 0rem 3rem;
 }
 
 .imageurl:hover .story-text {
@@ -33,15 +38,17 @@
           width: 100%;
           background-position: 50%;
           background-size: cover;
+          position: relative;
           .story-text {
             background: rgba(0,0,0,.6);
-            bottom: 0;
             color: #fff;
-            display: flex;
             font-size: 1rem;
+            position: absolute;
+            bottom: 0rem;
             p {
               line-height: 1.5rem;
               vertical-align: baseline;
+              padding: 0.5rem;
             }
           }
         }

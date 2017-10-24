@@ -1,14 +1,69 @@
 .site-header {
-  padding: 2rem 2rem 6rem 2rem;
+  padding: 2rem;
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   align-content: center;
-  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  // flex-wrap: wrap;
+  height: 500px;
 
   @include tablet {
+    flex-direction: row;
+    height: 100%;
     
   }
   @include desktop {
-  
+    flex-direction: row;
+    justify-content: flex-start;
+    height: 500px;
   }
+ 
+  .logo {
+    max-width: 15rem;
+    width: 15rem;
+    flex-direction: row;
+    justify-content: center;
+    display: flex;
+    // transform: translateX(45%);
+
+    @include tablet {
+      
+    }
+    @include desktop {
+      
+    }
+
+    .img {
+      justify-content: center;
+      // transform: translateX(-50%);
+      height: 50rem;
+      width: 50rem;
+      @include tablet {
+        height: auto;
+        width: auto;
+      }
+      @include desktop {
+        height: auto;
+        width: auto;
+      }
+    }
+  }
+
+}
+
+
+
+.search-menu {
+  align-self: center;
+  padding-top: 1rem;
+  padding-right: 3.5rem;
+
+  @include tablet {
+    padding-top: 0rem;
+  }
+  @include desktop {
+    padding-top: 0rem;
+  }
+
 }
