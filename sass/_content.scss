@@ -13,12 +13,12 @@
 }
 
 .search-menu {
-  margin: 0rem 0rem 0rem 3rem;
+  margin-bottom: 2rem;
 }
 
 .imageurl:hover .story-text {
   bottom: 0;
-  height: 40%;
+  height: 50%;
 }
 
 .stories {
@@ -55,11 +55,11 @@
       }
       @include tablet {
         flex: 0 1 33.33%;
-        max-width: 33.33%;
+        max-width: $tablet-width;
       }
       @include desktop {
         flex: 0 1 25%;
-        max-width: 25%;
+        max-width: $desktop-width;
       }
     }
   }

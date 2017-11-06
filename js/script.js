@@ -6,12 +6,12 @@ $(document).ready(function () {
     url += '?' + $.param({
       'api-key': '516e14d87c8e478195abbd4aaa72b938'
     });
-    $('.logo img').css({
-      'height': 'auto',
-      'width': '5rem'
+    $('.logo').css({
+      'height': '5rem',
+      'width': '3rem',
     });
     $('.site-header').css({
-      'height': '4.5rem'
+      'height': '12rem'
     });
 
     $('#stories ul li').remove();
@@ -43,4 +43,4 @@ $(document).ready(function () {
         // could also do .remove() to remove from the DOM, however you'd have to use .append() at the top instead of display block.
       });
   });
-});
+})

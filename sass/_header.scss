@@ -1,16 +1,17 @@
 .site-header {
-  padding: 2rem;
+  padding: 1rem;
   display: flex;
-  flex-direction: column;
+  flex-flow: column wrap;
   align-content: center;
   justify-content: center;
   align-items: center;
-  // flex-wrap: wrap;
-  height: 500px;
+  line-height: 2rem;  
+  height: 100%;
 
   @include tablet {
     flex-direction: row;
-    height: 100%;
+    justify-content: flex-start;
+    height: 500px;
     
   }
   @include desktop {
@@ -21,16 +22,18 @@
  
   .logo {
     max-width: 15rem;
-    width: 15rem;
     flex-direction: row;
     justify-content: center;
     display: flex;
+    padding-bottom: 1rem;
     // transform: translateX(45%);
 
     @include tablet {
+    padding: 1rem 3rem;
       
     }
     @include desktop {
+    padding: 1rem 3rem;
       
     }
 
@@ -49,21 +52,11 @@
       }
     }
   }
-
 }
 
-
-
-.search-menu {
-  align-self: center;
-  padding-top: 1rem;
-  padding-right: 3.5rem;
-
-  @include tablet {
-    padding-top: 0rem;
-  }
-  @include desktop {
-    padding-top: 0rem;
-  }
-
+.choose-menu {
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: center;
+  align-items: center;
 }
