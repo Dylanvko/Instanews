@@ -5,8 +5,7 @@
   align-content: center;
   justify-content: center;
   align-items: center;
-  // flex-wrap: wrap;
-  height: 500px;
+  height: auto;
 
   @include tablet {
     flex-direction: row;
@@ -25,7 +24,6 @@
     flex-direction: row;
     justify-content: center;
     display: flex;
-    // transform: translateX(45%);
 
     @include tablet {
       
@@ -36,7 +34,6 @@
 
     .img {
       justify-content: center;
-      // transform: translateX(-50%);
       height: 50rem;
       width: 50rem;
       @include tablet {

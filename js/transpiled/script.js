@@ -9,11 +9,11 @@ $(document).ready(function () {
       'api-key': '516e14d87c8e478195abbd4aaa72b938'
     });
     $('.logo img').css({
-      'height': 'auto',
-      'width': '5rem'
+      'height': '50%',
+      'width': '50%'
     });
     $('.site-header').css({
-      'height': '4.5rem'
+      'height': 'auto'
     });
 
     $('#stories ul li').remove();
