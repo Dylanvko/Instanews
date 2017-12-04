@@ -5,8 +5,8 @@
 
 .ajax-loader {
   display: none;
-  height: 1.5rem;
-  width: 1.5rem;
+  height: $base__space-unit;
+  width: $base__space-unit;
   position: absolute;
   top: 50%;
   left: 49%;
@@ -46,7 +46,7 @@
             position: absolute;
             bottom: 0rem;
             p {
-              line-height: 1.5rem;
+              line-height: $base__space-unit;
               vertical-align: baseline;
               padding: 0.5rem;
             }
