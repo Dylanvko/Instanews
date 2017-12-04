@@ -1,7 +1,8 @@
-.container {
+.site-container {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  align-content: center;
+  height: 100%;
 
 .ajax-loader {
   display: none;
@@ -41,7 +42,7 @@
           position: relative;
           .story-text {
             background: rgba(0,0,0,.6);
-            color: #fff;
+            color: $color__lightest;
             font-size: 1rem;
             position: absolute;
             bottom: 0rem;

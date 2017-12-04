@@ -159,7 +159,7 @@ body {
   font-family: 'Open Sans';
   font-weight: lighter;
   font-size: 16px;
-  color: #ffffff; }
+  color: #FFFFFF; }
 
 .site-header {
   padding: 2rem;
@@ -188,14 +188,10 @@ body {
       height: 100%; } }
   @media (min-width: 1000px) {
     .site-header {
-      -webkit-box-orient: horizontal;
-      -webkit-box-direction: normal;
-          -ms-flex-direction: row;
-              flex-direction: row;
       -webkit-box-pack: start;
           -ms-flex-pack: start;
               justify-content: flex-start;
-      height: 500px; } }
+      height: 100%; } }
   .site-header .logo {
     max-width: 15rem;
     width: 15rem;
@@ -242,7 +238,7 @@ body {
 .selector {
   font-size: 1.1rem; }
 
-.container {
+.site-container {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -250,59 +246,59 @@ body {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between; }
-  .container .ajax-loader {
+  -ms-flex-line-pack: center;
+      align-content: center;
+  height: 100%; }
+  .site-container .ajax-loader {
     display: none;
     height: 1.5rem;
     width: 1.5rem;
     position: absolute;
     top: 50%;
     left: 49%; }
-  .container .search-menu {
+  .site-container .search-menu {
     margin: 0rem 0rem 0rem 3rem; }
-  .container .imageurl:hover .story-text {
+  .site-container .imageurl:hover .story-text {
     bottom: 0;
     height: 40%; }
-  .container .stories ul {
+  .site-container .stories ul {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
     -ms-flex-wrap: wrap;
         flex-wrap: wrap; }
-    .container .stories ul li {
+    .site-container .stories ul li {
       -webkit-box-flex: 0;
           -ms-flex: 0 1 100%;
               flex: 0 1 100%;
       max-width: 100%; }
-      .container .stories ul li a {
+      .site-container .stories ul li a {
         text-decoration: none; }
-      .container .stories ul li .storywrapper .imageurl {
+      .site-container .stories ul li .storywrapper .imageurl {
         display: block;
         height: 420px;
         width: 100%;
         background-position: 50%;
         background-size: cover;
         position: relative; }
-        .container .stories ul li .storywrapper .imageurl .story-text {
+        .site-container .stories ul li .storywrapper .imageurl .story-text {
           background: rgba(0, 0, 0, 0.6);
-          color: #fff;
+          color: #FFFFFF;
           font-size: 1rem;
           position: absolute;
           bottom: 0rem; }
-          .container .stories ul li .storywrapper .imageurl .story-text p {
+          .site-container .stories ul li .storywrapper .imageurl .story-text p {
             line-height: 1.5rem;
             vertical-align: baseline;
             padding: 0.5rem; }
       @media (min-width: 600px) {
-        .container .stories ul li {
+        .site-container .stories ul li {
           -webkit-box-flex: 0;
               -ms-flex: 0 1 33.33%;
                   flex: 0 1 33.33%;
           max-width: 33.33%; } }
       @media (min-width: 1000px) {
-        .container .stories ul li {
+        .site-container .stories ul li {
           -webkit-box-flex: 0;
               -ms-flex: 0 1 25%;
                   flex: 0 1 25%;
