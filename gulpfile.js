@@ -30,8 +30,8 @@ gulp.task('sass', function () {
     .pipe(gulp.dest('./build/css')); //destination
 });
 
-gulp.task('scripts', ['lint', 'babel'], function () {
-  gulp.src('./js/*.js') // What files do we want gulp to consume?
+gulp.task('scripts', ['lint'], function () {
+  gulp.src('./js/transpiled/*.js') // What files do we want gulp to consume?
     .pipe(prettyError())
     .pipe(uglify()) // Call the uglify function on these files
     .pipe(rename({
@@ -58,7 +58,7 @@ gulp.task('browser-sync', function () {
 gulp.task('default', ['watch', 'browser-sync']);
 
 gulp.task('lint', function () {
-  return gulp.src(['./js/*.js', '!node_modules/**'])
+  return gulp.src(['./js/transpiled/*.js', '!node_modules/**'])
     .pipe(eslint())
     .pipe(eslint.format())
     .pipe(eslint.failAfterError());

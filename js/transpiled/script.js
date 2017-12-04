@@ -26,7 +26,7 @@ $(document).ready(function () {
     }).done(function (data) {
 
       var slicedData = data.results.slice(0, 12);
-      console.log(slicedData);
+
       var filteredData = slicedData.filter(function (item) {
         return item.multimedia.length;
       });

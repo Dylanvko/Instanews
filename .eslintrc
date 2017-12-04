@@ -1,7 +1,8 @@
 {
   "extends": "eslint:recommended",
+  "parser": "babel-eslint",
   "rules": {
-    "no-alert": 1,
+    "no-alert": 0,
     "camelcase": 1,
     "curly": 1,
     "eqeqeq": 1,
@@ -10,7 +11,7 @@
     "no-empty": 1,
     "no-param-reassign": 1,
     "no-unused-vars": 1,
-    "quotes": [ 1, "single"],
+    "quotes": [ 1, "single"]
   },
   "globals": {
     "jQuery": false,

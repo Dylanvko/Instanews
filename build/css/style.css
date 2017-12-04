@@ -236,6 +236,12 @@ body {
     .search-menu {
       padding-top: 0rem; } }
 
+.menu-title {
+  margin-bottom: 0.5rem; }
+
+.selector {
+  font-size: 1.1rem; }
+
 .container {
   display: -webkit-box;
   display: -ms-flexbox;
