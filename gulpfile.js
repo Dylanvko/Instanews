@@ -6,8 +6,18 @@ var gulp = require('gulp'); // Load Gulp!
   sass = require('gulp-sass'),
   autoprefixer = require('gulp-autoprefixer'),
   cssnano = require('gulp-cssnano'),
-  prettyError = require('gulp-prettyerror');
+  prettyError = require('gulp-prettyerror'),
+  babel = require('gulp-babel');
 
+  const input = './js/*.js';
+  const output = './js/transpiled';
+
+gulp.task('babel', function(){
+  return gulp.src(input)
+  .pipe(babel())
+  .pipe(gulp.dest(output));
+});
+  
 gulp.task('sass', function () {
   gulp.src('./sass/style.scss')
     .pipe(sass())
@@ -20,7 +30,7 @@ gulp.task('sass', function () {
     .pipe(gulp.dest('./build/css')); //destination
 });
 
-gulp.task('scripts', ['lint'], function () {
+gulp.task('scripts', ['lint', 'babel'], function () {
   gulp.src('./js/*.js') // What files do we want gulp to consume?
     .pipe(prettyError())
     .pipe(uglify()) // Call the uglify function on these files
