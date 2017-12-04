@@ -6,8 +6,18 @@ var gulp = require('gulp'); // Load Gulp!
   sass = require('gulp-sass'),
   autoprefixer = require('gulp-autoprefixer'),
   cssnano = require('gulp-cssnano'),
-  prettyError = require('gulp-prettyerror');
+  prettyError = require('gulp-prettyerror'),
+  babel = require('gulp-babel');
 
+  const input = './js/*.js';
+  const output = './js/transpiled';
+
+gulp.task('babel', function(){
+  return gulp.src(input)
+  .pipe(babel())
+  .pipe(gulp.dest(output));
+});
+  
 gulp.task('sass', function () {
   gulp.src('./sass/style.scss')
     .pipe(sass())
@@ -21,7 +31,7 @@ gulp.task('sass', function () {
 });
 
 gulp.task('scripts', ['lint'], function () {
-  gulp.src('./js/*.js') // What files do we want gulp to consume?
+  gulp.src('./js/transpiled/*.js') // What files do we want gulp to consume?
     .pipe(prettyError())
     .pipe(uglify()) // Call the uglify function on these files
     .pipe(rename({
@@ -48,7 +58,7 @@ gulp.task('browser-sync', function () {
 gulp.task('default', ['watch', 'browser-sync']);
 
 gulp.task('lint', function () {
-  return gulp.src(['./js/*.js', '!node_modules/**'])
+  return gulp.src(['./js/transpiled/*.js', '!node_modules/**'])
     .pipe(eslint())
     .pipe(eslint.format())
     .pipe(eslint.failAfterError());
